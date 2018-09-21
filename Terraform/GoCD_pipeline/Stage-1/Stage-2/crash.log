@@ -1,0 +1,1055 @@
+2018/09/20 12:42:15 [INFO] Terraform version: 0.11.8  7a5c1d221ac209bbac66947c369815cd9ca70ed5
+2018/09/20 12:42:15 [INFO] Go runtime version: go1.10.1
+2018/09/20 12:42:15 [INFO] CLI args: []string{"/usr/local/bin/terraform", "apply"}
+2018/09/20 12:42:15 [DEBUG] Attempting to open CLI config file: /home/keshav/.terraformrc
+2018/09/20 12:42:15 [DEBUG] File doesn't exist, but doesn't need to. Ignoring.
+2018/09/20 12:42:15 [INFO] CLI command args: []string{"apply"}
+2018/09/20 12:42:15 [INFO] command: empty terraform config, returning nil
+2018/09/20 12:42:15 [DEBUG] command: no data state file found for backend config
+2018/09/20 12:42:15 [DEBUG] New state was assigned lineage "2b3d9081-029b-a0b9-54f2-857befdad55d"
+2018/09/20 12:42:15 [INFO] command: backend initialized: <nil>
+2018/09/20 12:42:15 [DEBUG] checking for provider in "."
+2018/09/20 12:42:15 [DEBUG] checking for provider in "/usr/local/bin"
+2018/09/20 12:42:15 [DEBUG] checking for provider in ".terraform/plugins/linux_amd64"
+2018/09/20 12:42:15 [DEBUG] checking for provider in "/home/keshav/.terraform.d/plugins"
+2018/09/20 12:42:15 [WARN] found legacy provider "terraform-provider-gocd"
+2018/09/20 12:42:15 [DEBUG] checking for provider in "/home/keshav/.terraform.d/plugins/linux_amd64"
+2018/09/20 12:42:15 [WARN] found legacy provider "terraform-provider-gocd"
+2018/09/20 12:42:15 [DEBUG] found valid plugin: "gocd", "0.0.0", "/home/keshav/.terraform.d/plugins/terraform-provider-gocd"
+2018/09/20 12:42:15 [DEBUG] checking for provisioner in "."
+2018/09/20 12:42:15 [DEBUG] checking for provisioner in "/usr/local/bin"
+2018/09/20 12:42:15 [DEBUG] checking for provisioner in ".terraform/plugins/linux_amd64"
+2018/09/20 12:42:15 [DEBUG] checking for provisioner in "/home/keshav/.terraform.d/plugins"
+2018/09/20 12:42:15 [DEBUG] checking for provisioner in "/home/keshav/.terraform.d/plugins/linux_amd64"
+2018/09/20 12:42:15 [INFO] command: backend <nil> is not enhanced, wrapping in local
+2018/09/20 12:42:15 [INFO] backend/local: starting Apply operation
+2018/09/20 12:42:15 [TRACE] Preserving existing state lineage "6205b38b-f388-4681-882b-b25b2fa1042a"
+2018/09/20 12:42:15 [TRACE] Preserving existing state lineage "6205b38b-f388-4681-882b-b25b2fa1042a"
+2018/09/20 12:42:15 [INFO] terraform: building graph: GraphTypeInput
+2018/09/20 12:42:15 [TRACE] ConfigTransformer: Starting for path: []
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.ConfigTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodeAbstractResource
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.LocalTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodeAbstractResource
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.OutputTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodeAbstractResource
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.OrphanResourceTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodeAbstractResource
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.OrphanOutputTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodeAbstractResource
+2018/09/20 12:42:15 [TRACE] AttachResourceConfigTransformer: Beginning...
+2018/09/20 12:42:15 [TRACE] AttachResourceConfigTransformer: Attach resource config request: gocd_pipeline_stage.build
+2018/09/20 12:42:15 [TRACE] Attaching resource config: &config.Resource{Mode:0, Name:"build", Type:"gocd_pipeline_stage", RawCount:(*config.RawConfig)(0xc420407f10), RawConfig:(*config.RawConfig)(0xc420407ea0), Provisioners:[]*config.Provisioner(nil), Provider:"", DependsOn:[]string(nil), Lifecycle:config.ResourceLifecycle{CreateBeforeDestroy:false, PreventDestroy:false, IgnoreChanges:[]string(nil)}}
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.AttachResourceConfigTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodeAbstractResource
+2018/09/20 12:42:15 [DEBUG] Resource state not found for "gocd_pipeline_stage.build": gocd_pipeline_stage.build
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.AttachStateTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodeAbstractResource
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.RootVariableTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodeAbstractResource
+2018/09/20 12:42:15 [TRACE] ProviderConfigTransformer: Starting for path: []
+2018/09/20 12:42:15 [TRACE] Attach provider request: []string{} gocd
+2018/09/20 12:42:15 [TRACE] Attaching provider config: *config.ProviderConfig{Name:"gocd", Alias:"", Version:"", RawConfig:(*config.RawConfig)(0xc420407e30)}
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.ProviderConfigTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodeAbstractResource
+provider.gocd - *terraform.NodeApplyableProvider
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.MissingProviderTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodeAbstractResource
+provider.gocd - *terraform.NodeApplyableProvider
+2018/09/20 12:42:15 [DEBUG] resource gocd_pipeline_stage.build using provider provider.gocd
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.ProviderTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodeAbstractResource
+  provider.gocd - *terraform.NodeApplyableProvider
+provider.gocd - *terraform.NodeApplyableProvider
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.PruneProviderTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodeAbstractResource
+  provider.gocd - *terraform.NodeApplyableProvider
+provider.gocd - *terraform.NodeApplyableProvider
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.ParentProviderTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodeAbstractResource
+  provider.gocd - *terraform.NodeApplyableProvider
+provider.gocd - *terraform.NodeApplyableProvider
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.graphTransformerMulti:
+
+gocd_pipeline_stage.build - *terraform.NodeAbstractResource
+  provider.gocd - *terraform.NodeApplyableProvider
+provider.gocd - *terraform.NodeApplyableProvider
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.ModuleVariableTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodeAbstractResource
+  provider.gocd - *terraform.NodeApplyableProvider
+provider.gocd - *terraform.NodeApplyableProvider
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.RemovedModuleTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodeAbstractResource
+  provider.gocd - *terraform.NodeApplyableProvider
+provider.gocd - *terraform.NodeApplyableProvider
+2018/09/20 12:42:15 [DEBUG] ReferenceTransformer: "gocd_pipeline_stage.build" references: []
+2018/09/20 12:42:15 [DEBUG] ReferenceTransformer: "provider.gocd" references: []
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.ReferenceTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodeAbstractResource
+  provider.gocd - *terraform.NodeApplyableProvider
+provider.gocd - *terraform.NodeApplyableProvider
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.CountBoundaryTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodeAbstractResource
+  provider.gocd - *terraform.NodeApplyableProvider
+meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  gocd_pipeline_stage.build - *terraform.NodeAbstractResource
+  provider.gocd - *terraform.NodeApplyableProvider
+provider.gocd - *terraform.NodeApplyableProvider
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.TargetsTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodeAbstractResource
+  provider.gocd - *terraform.NodeApplyableProvider
+meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  gocd_pipeline_stage.build - *terraform.NodeAbstractResource
+  provider.gocd - *terraform.NodeApplyableProvider
+provider.gocd - *terraform.NodeApplyableProvider
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.CloseProviderTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodeAbstractResource
+  provider.gocd - *terraform.NodeApplyableProvider
+meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  gocd_pipeline_stage.build - *terraform.NodeAbstractResource
+  provider.gocd - *terraform.NodeApplyableProvider
+provider.gocd - *terraform.NodeApplyableProvider
+provider.gocd (close) - *terraform.graphNodeCloseProvider
+  gocd_pipeline_stage.build - *terraform.NodeAbstractResource
+  provider.gocd - *terraform.NodeApplyableProvider
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.CloseProvisionerTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodeAbstractResource
+  provider.gocd - *terraform.NodeApplyableProvider
+meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  gocd_pipeline_stage.build - *terraform.NodeAbstractResource
+  provider.gocd - *terraform.NodeApplyableProvider
+provider.gocd - *terraform.NodeApplyableProvider
+provider.gocd (close) - *terraform.graphNodeCloseProvider
+  gocd_pipeline_stage.build - *terraform.NodeAbstractResource
+  provider.gocd - *terraform.NodeApplyableProvider
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.RootTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodeAbstractResource
+  provider.gocd - *terraform.NodeApplyableProvider
+meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  gocd_pipeline_stage.build - *terraform.NodeAbstractResource
+  provider.gocd - *terraform.NodeApplyableProvider
+provider.gocd - *terraform.NodeApplyableProvider
+provider.gocd (close) - *terraform.graphNodeCloseProvider
+  gocd_pipeline_stage.build - *terraform.NodeAbstractResource
+  provider.gocd - *terraform.NodeApplyableProvider
+root - terraform.graphNodeRoot
+  meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  provider.gocd (close) - *terraform.graphNodeCloseProvider
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.TransitiveReductionTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodeAbstractResource
+  provider.gocd - *terraform.NodeApplyableProvider
+meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  gocd_pipeline_stage.build - *terraform.NodeAbstractResource
+provider.gocd - *terraform.NodeApplyableProvider
+provider.gocd (close) - *terraform.graphNodeCloseProvider
+  gocd_pipeline_stage.build - *terraform.NodeAbstractResource
+root - terraform.graphNodeRoot
+  meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  provider.gocd (close) - *terraform.graphNodeCloseProvider
+2018/09/20 12:42:15 [DEBUG] Starting graph walk: walkInput
+2018/09/20 12:42:15 [TRACE] dag/walk: added new vertex: "gocd_pipeline_stage.build"
+2018/09/20 12:42:15 [TRACE] dag/walk: added new vertex: "provider.gocd"
+2018/09/20 12:42:15 [TRACE] dag/walk: added new vertex: "meta.count-boundary (count boundary fixup)"
+2018/09/20 12:42:15 [TRACE] dag/walk: added new vertex: "provider.gocd (close)"
+2018/09/20 12:42:15 [TRACE] dag/walk: added new vertex: "root"
+2018/09/20 12:42:15 [TRACE] dag/walk: added edge: "provider.gocd (close)" waiting on "gocd_pipeline_stage.build"
+2018/09/20 12:42:15 [TRACE] dag/walk: added edge: "root" waiting on "provider.gocd (close)"
+2018/09/20 12:42:15 [TRACE] dag/walk: added edge: "root" waiting on "meta.count-boundary (count boundary fixup)"
+2018/09/20 12:42:15 [TRACE] dag/walk: added edge: "gocd_pipeline_stage.build" waiting on "provider.gocd"
+2018/09/20 12:42:15 [TRACE] dag/walk: added edge: "meta.count-boundary (count boundary fixup)" waiting on "gocd_pipeline_stage.build"
+2018/09/20 12:42:15 [TRACE] dag/walk: dependencies changed for "meta.count-boundary (count boundary fixup)", sending new deps
+2018/09/20 12:42:15 [TRACE] dag/walk: dependencies changed for "provider.gocd (close)", sending new deps
+2018/09/20 12:42:15 [TRACE] dag/walk: dependencies changed for "root", sending new deps
+2018/09/20 12:42:15 [TRACE] dag/walk: dependencies changed for "gocd_pipeline_stage.build", sending new deps
+2018/09/20 12:42:15 [TRACE] dag/walk: walking "provider.gocd"
+2018/09/20 12:42:15 [TRACE] vertex 'root.provider.gocd': walking
+2018/09/20 12:42:15 [TRACE] vertex 'root.provider.gocd': evaluating
+2018/09/20 12:42:15 [TRACE] [walkInput] Entering eval tree: provider.gocd
+2018/09/20 12:42:15 [TRACE] root: eval: *terraform.EvalSequence
+2018/09/20 12:42:15 [TRACE] root: eval: *terraform.EvalInitProvider
+2018-09-20T12:42:15.113+0530 [DEBUG] plugin: starting plugin: path=/home/keshav/.terraform.d/plugins/terraform-provider-gocd args=[/home/keshav/.terraform.d/plugins/terraform-provider-gocd]
+2018-09-20T12:42:15.114+0530 [DEBUG] plugin: waiting for RPC address: path=/home/keshav/.terraform.d/plugins/terraform-provider-gocd
+2018-09-20T12:42:15.122+0530 [DEBUG] plugin.terraform-provider-gocd: plugin address: timestamp=2018-09-20T12:42:15.122+0530 address=/tmp/plugin951955250 network=unix
+2018/09/20 12:42:15 [TRACE] root: eval: *terraform.EvalOpFilter
+2018/09/20 12:42:15 [TRACE] root: eval: *terraform.EvalSequence
+2018/09/20 12:42:15 [TRACE] root: eval: *terraform.EvalGetProvider
+2018/09/20 12:42:15 [TRACE] root: eval: *terraform.EvalInterpolateProvider
+2018/09/20 12:42:15 [TRACE] root: eval: *terraform.EvalBuildProviderConfig
+2018/09/20 12:42:15 [TRACE] root: eval: *terraform.EvalInputProvider
+2018/09/20 12:42:15 [TRACE] root: eval: terraform.EvalNoop
+2018/09/20 12:42:15 [TRACE] root: eval: terraform.EvalNoop
+2018/09/20 12:42:15 [TRACE] root: eval: terraform.EvalNoop
+2018/09/20 12:42:15 [TRACE] [walkInput] Exiting eval tree: provider.gocd
+2018/09/20 12:42:15 [TRACE] dag/walk: walking "gocd_pipeline_stage.build"
+2018/09/20 12:42:15 [TRACE] vertex 'root.gocd_pipeline_stage.build': walking
+2018/09/20 12:42:15 [TRACE] dag/walk: walking "meta.count-boundary (count boundary fixup)"
+2018/09/20 12:42:15 [TRACE] vertex 'root.meta.count-boundary (count boundary fixup)': walking
+2018/09/20 12:42:15 [TRACE] dag/walk: walking "provider.gocd (close)"
+2018/09/20 12:42:15 [TRACE] vertex 'root.provider.gocd (close)': walking
+2018/09/20 12:42:15 [TRACE] vertex 'root.meta.count-boundary (count boundary fixup)': evaluating
+2018/09/20 12:42:15 [TRACE] vertex 'root.provider.gocd (close)': evaluating
+2018/09/20 12:42:15 [TRACE] [walkInput] Entering eval tree: provider.gocd (close)
+2018/09/20 12:42:15 [TRACE] root: eval: *terraform.EvalCloseProvider
+2018/09/20 12:42:15 [TRACE] [walkInput] Exiting eval tree: provider.gocd (close)
+2018/09/20 12:42:15 [TRACE] [walkInput] Entering eval tree: meta.count-boundary (count boundary fixup)
+2018/09/20 12:42:15 [TRACE] root: eval: *terraform.EvalCountFixZeroOneBoundaryGlobal
+2018/09/20 12:42:15 [TRACE] [walkInput] Exiting eval tree: meta.count-boundary (count boundary fixup)
+2018/09/20 12:42:15 [TRACE] dag/walk: walking "root"
+2018/09/20 12:42:15 [TRACE] vertex 'root.root': walking
+2018/09/20 12:42:15 [INFO] terraform: building graph: GraphTypeValidate
+2018/09/20 12:42:15 [TRACE] ConfigTransformer: Starting for path: []
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.ConfigTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodeValidatableResource
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.LocalTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodeValidatableResource
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.OutputTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodeValidatableResource
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.OrphanResourceTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodeValidatableResource
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.OrphanOutputTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodeValidatableResource
+2018/09/20 12:42:15 [TRACE] AttachResourceConfigTransformer: Beginning...
+2018/09/20 12:42:15 [TRACE] AttachResourceConfigTransformer: Attach resource config request: gocd_pipeline_stage.build
+2018/09/20 12:42:15 [TRACE] Attaching resource config: &config.Resource{Mode:0, Name:"build", Type:"gocd_pipeline_stage", RawCount:(*config.RawConfig)(0xc420407f10), RawConfig:(*config.RawConfig)(0xc420407ea0), Provisioners:[]*config.Provisioner(nil), Provider:"", DependsOn:[]string(nil), Lifecycle:config.ResourceLifecycle{CreateBeforeDestroy:false, PreventDestroy:false, IgnoreChanges:[]string(nil)}}
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.AttachResourceConfigTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodeValidatableResource
+2018/09/20 12:42:15 [DEBUG] Resource state not found for "gocd_pipeline_stage.build": gocd_pipeline_stage.build
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.AttachStateTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodeValidatableResource
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.RootVariableTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodeValidatableResource
+2018/09/20 12:42:15 [TRACE] ProviderConfigTransformer: Starting for path: []
+2018/09/20 12:42:15 [TRACE] Attach provider request: []string{} gocd
+2018/09/20 12:42:15 [TRACE] Attaching provider config: *config.ProviderConfig{Name:"gocd", Alias:"", Version:"", RawConfig:(*config.RawConfig)(0xc420407e30)}
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.ProviderConfigTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodeValidatableResource
+provider.gocd - *terraform.NodeApplyableProvider
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.MissingProviderTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodeValidatableResource
+provider.gocd - *terraform.NodeApplyableProvider
+2018/09/20 12:42:15 [DEBUG] resource gocd_pipeline_stage.build using provider provider.gocd
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.ProviderTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodeValidatableResource
+  provider.gocd - *terraform.NodeApplyableProvider
+provider.gocd - *terraform.NodeApplyableProvider
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.PruneProviderTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodeValidatableResource
+  provider.gocd - *terraform.NodeApplyableProvider
+provider.gocd - *terraform.NodeApplyableProvider
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.ParentProviderTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodeValidatableResource
+  provider.gocd - *terraform.NodeApplyableProvider
+provider.gocd - *terraform.NodeApplyableProvider
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.graphTransformerMulti:
+
+gocd_pipeline_stage.build - *terraform.NodeValidatableResource
+  provider.gocd - *terraform.NodeApplyableProvider
+provider.gocd - *terraform.NodeApplyableProvider
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.MissingProvisionerTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodeValidatableResource
+  provider.gocd - *terraform.NodeApplyableProvider
+provider.gocd - *terraform.NodeApplyableProvider
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.ProvisionerTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodeValidatableResource
+  provider.gocd - *terraform.NodeApplyableProvider
+provider.gocd - *terraform.NodeApplyableProvider
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.graphTransformerMulti:
+
+gocd_pipeline_stage.build - *terraform.NodeValidatableResource
+  provider.gocd - *terraform.NodeApplyableProvider
+provider.gocd - *terraform.NodeApplyableProvider
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.ModuleVariableTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodeValidatableResource
+  provider.gocd - *terraform.NodeApplyableProvider
+provider.gocd - *terraform.NodeApplyableProvider
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.RemovedModuleTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodeValidatableResource
+  provider.gocd - *terraform.NodeApplyableProvider
+provider.gocd - *terraform.NodeApplyableProvider
+2018/09/20 12:42:15 [DEBUG] ReferenceTransformer: "gocd_pipeline_stage.build" references: []
+2018/09/20 12:42:15 [DEBUG] ReferenceTransformer: "provider.gocd" references: []
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.ReferenceTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodeValidatableResource
+  provider.gocd - *terraform.NodeApplyableProvider
+provider.gocd - *terraform.NodeApplyableProvider
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.CountBoundaryTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodeValidatableResource
+  provider.gocd - *terraform.NodeApplyableProvider
+meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  gocd_pipeline_stage.build - *terraform.NodeValidatableResource
+  provider.gocd - *terraform.NodeApplyableProvider
+provider.gocd - *terraform.NodeApplyableProvider
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.TargetsTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodeValidatableResource
+  provider.gocd - *terraform.NodeApplyableProvider
+meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  gocd_pipeline_stage.build - *terraform.NodeValidatableResource
+  provider.gocd - *terraform.NodeApplyableProvider
+provider.gocd - *terraform.NodeApplyableProvider
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.CloseProviderTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodeValidatableResource
+  provider.gocd - *terraform.NodeApplyableProvider
+meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  gocd_pipeline_stage.build - *terraform.NodeValidatableResource
+  provider.gocd - *terraform.NodeApplyableProvider
+provider.gocd - *terraform.NodeApplyableProvider
+provider.gocd (close) - *terraform.graphNodeCloseProvider
+  gocd_pipeline_stage.build - *terraform.NodeValidatableResource
+  provider.gocd - *terraform.NodeApplyableProvider
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.CloseProvisionerTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodeValidatableResource
+  provider.gocd - *terraform.NodeApplyableProvider
+meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  gocd_pipeline_stage.build - *terraform.NodeValidatableResource
+  provider.gocd - *terraform.NodeApplyableProvider
+provider.gocd - *terraform.NodeApplyableProvider
+provider.gocd (close) - *terraform.graphNodeCloseProvider
+  gocd_pipeline_stage.build - *terraform.NodeValidatableResource
+  provider.gocd - *terraform.NodeApplyableProvider
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.RootTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodeValidatableResource
+  provider.gocd - *terraform.NodeApplyableProvider
+meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  gocd_pipeline_stage.build - *terraform.NodeValidatableResource
+  provider.gocd - *terraform.NodeApplyableProvider
+provider.gocd - *terraform.NodeApplyableProvider
+provider.gocd (close) - *terraform.graphNodeCloseProvider
+  gocd_pipeline_stage.build - *terraform.NodeValidatableResource
+  provider.gocd - *terraform.NodeApplyableProvider
+root - terraform.graphNodeRoot
+  meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  provider.gocd (close) - *terraform.graphNodeCloseProvider
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.TransitiveReductionTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodeValidatableResource
+  provider.gocd - *terraform.NodeApplyableProvider
+meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  gocd_pipeline_stage.build - *terraform.NodeValidatableResource
+provider.gocd - *terraform.NodeApplyableProvider
+provider.gocd (close) - *terraform.graphNodeCloseProvider
+  gocd_pipeline_stage.build - *terraform.NodeValidatableResource
+root - terraform.graphNodeRoot
+  meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  provider.gocd (close) - *terraform.graphNodeCloseProvider
+2018/09/20 12:42:15 [DEBUG] Starting graph walk: walkValidate
+2018/09/20 12:42:15 [TRACE] dag/walk: added new vertex: "root"
+2018/09/20 12:42:15 [TRACE] dag/walk: added new vertex: "gocd_pipeline_stage.build"
+2018/09/20 12:42:15 [TRACE] dag/walk: added new vertex: "provider.gocd"
+2018/09/20 12:42:15 [TRACE] dag/walk: added new vertex: "meta.count-boundary (count boundary fixup)"
+2018/09/20 12:42:15 [TRACE] dag/walk: added new vertex: "provider.gocd (close)"
+2018/09/20 12:42:15 [TRACE] dag/walk: added edge: "root" waiting on "meta.count-boundary (count boundary fixup)"
+2018/09/20 12:42:15 [TRACE] dag/walk: added edge: "root" waiting on "provider.gocd (close)"
+2018/09/20 12:42:15 [TRACE] dag/walk: added edge: "gocd_pipeline_stage.build" waiting on "provider.gocd"
+2018/09/20 12:42:15 [TRACE] dag/walk: added edge: "meta.count-boundary (count boundary fixup)" waiting on "gocd_pipeline_stage.build"
+2018/09/20 12:42:15 [TRACE] dag/walk: added edge: "provider.gocd (close)" waiting on "gocd_pipeline_stage.build"
+2018/09/20 12:42:15 [TRACE] dag/walk: dependencies changed for "root", sending new deps
+2018/09/20 12:42:15 [TRACE] dag/walk: dependencies changed for "gocd_pipeline_stage.build", sending new deps
+2018/09/20 12:42:15 [TRACE] dag/walk: dependencies changed for "meta.count-boundary (count boundary fixup)", sending new deps
+2018/09/20 12:42:15 [TRACE] dag/walk: dependencies changed for "provider.gocd (close)", sending new deps
+2018/09/20 12:42:15 [TRACE] dag/walk: walking "provider.gocd"
+2018/09/20 12:42:15 [TRACE] vertex 'root.provider.gocd': walking
+2018/09/20 12:42:15 [TRACE] vertex 'root.provider.gocd': evaluating
+2018/09/20 12:42:15 [TRACE] [walkValidate] Entering eval tree: provider.gocd
+2018/09/20 12:42:15 [TRACE] root: eval: *terraform.EvalSequence
+2018/09/20 12:42:15 [TRACE] root: eval: *terraform.EvalInitProvider
+2018/09/20 12:42:15 [TRACE] root: eval: terraform.EvalNoop
+2018/09/20 12:42:15 [TRACE] root: eval: *terraform.EvalOpFilter
+2018/09/20 12:42:15 [TRACE] root: eval: *terraform.EvalSequence
+2018/09/20 12:42:15 [TRACE] root: eval: *terraform.EvalGetProvider
+2018/09/20 12:42:15 [TRACE] root: eval: *terraform.EvalInterpolateProvider
+2018/09/20 12:42:15 [TRACE] root: eval: *terraform.EvalBuildProviderConfig
+2018/09/20 12:42:15 [TRACE] root: eval: *terraform.EvalValidateProvider
+2018/09/20 12:42:15 [TRACE] root: eval: terraform.EvalNoop
+2018/09/20 12:42:15 [TRACE] root: eval: terraform.EvalNoop
+2018/09/20 12:42:15 [TRACE] [walkValidate] Exiting eval tree: provider.gocd
+2018/09/20 12:42:15 [TRACE] dag/walk: walking "gocd_pipeline_stage.build"
+2018/09/20 12:42:15 [TRACE] vertex 'root.gocd_pipeline_stage.build': walking
+2018/09/20 12:42:15 [TRACE] vertex 'root.gocd_pipeline_stage.build': evaluating
+2018/09/20 12:42:15 [TRACE] [walkValidate] Entering eval tree: gocd_pipeline_stage.build
+2018/09/20 12:42:15 [TRACE] root: eval: *terraform.EvalSequence
+2018/09/20 12:42:15 [TRACE] root: eval: *terraform.EvalInterpolate
+2018/09/20 12:42:15 [TRACE] root: eval: *terraform.EvalIf
+2018/09/20 12:42:15 [TRACE] root: eval: *terraform.EvalValidateCount
+2018/09/20 12:42:15 [TRACE] root: eval: *terraform.EvalCountFixZeroOneBoundary
+2018/09/20 12:42:15 [TRACE] [walkValidate] Exiting eval tree: gocd_pipeline_stage.build
+2018/09/20 12:42:15 [TRACE] vertex 'root.gocd_pipeline_stage.build': expanding/walking dynamic subgraph
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.ResourceCountTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodeValidatableResourceInstance
+2018/09/20 12:42:15 [DEBUG] Resource state not found for "gocd_pipeline_stage.build": gocd_pipeline_stage.build
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.AttachStateTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodeValidatableResourceInstance
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.TargetsTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodeValidatableResourceInstance
+2018/09/20 12:42:15 [DEBUG] ReferenceTransformer: "gocd_pipeline_stage.build" references: []
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.ReferenceTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodeValidatableResourceInstance
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.RootTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodeValidatableResourceInstance
+2018/09/20 12:42:15 [TRACE] dag/walk: added new vertex: "gocd_pipeline_stage.build"
+2018/09/20 12:42:15 [TRACE] dag/walk: walking "gocd_pipeline_stage.build"
+2018/09/20 12:42:15 [TRACE] vertex 'root.gocd_pipeline_stage.build': walking
+2018/09/20 12:42:15 [TRACE] vertex 'root.gocd_pipeline_stage.build': evaluating
+2018/09/20 12:42:15 [TRACE] [walkValidate] Entering eval tree: gocd_pipeline_stage.build
+2018/09/20 12:42:15 [TRACE] root: eval: *terraform.EvalSequence
+2018/09/20 12:42:15 [TRACE] root: eval: *terraform.EvalValidateResourceSelfRef
+2018/09/20 12:42:15 [TRACE] root: eval: *terraform.EvalGetProvider
+2018/09/20 12:42:15 [TRACE] root: eval: *terraform.EvalInterpolate
+2018/09/20 12:42:15 [TRACE] root: eval: *terraform.EvalValidateResource
+2018/09/20 12:42:15 [TRACE] [walkValidate] Exiting eval tree: gocd_pipeline_stage.build
+2018/09/20 12:42:15 [TRACE] dag/walk: walking "meta.count-boundary (count boundary fixup)"
+2018/09/20 12:42:15 [TRACE] vertex 'root.meta.count-boundary (count boundary fixup)': walking
+2018/09/20 12:42:15 [TRACE] vertex 'root.meta.count-boundary (count boundary fixup)': evaluating
+2018/09/20 12:42:15 [TRACE] [walkValidate] Entering eval tree: meta.count-boundary (count boundary fixup)
+2018/09/20 12:42:15 [TRACE] root: eval: *terraform.EvalCountFixZeroOneBoundaryGlobal
+2018/09/20 12:42:15 [TRACE] [walkValidate] Exiting eval tree: meta.count-boundary (count boundary fixup)
+2018/09/20 12:42:15 [TRACE] dag/walk: walking "provider.gocd (close)"
+2018/09/20 12:42:15 [TRACE] vertex 'root.provider.gocd (close)': walking
+2018/09/20 12:42:15 [TRACE] vertex 'root.provider.gocd (close)': evaluating
+2018/09/20 12:42:15 [TRACE] [walkValidate] Entering eval tree: provider.gocd (close)
+2018/09/20 12:42:15 [TRACE] root: eval: *terraform.EvalCloseProvider
+2018/09/20 12:42:15 [TRACE] [walkValidate] Exiting eval tree: provider.gocd (close)
+2018/09/20 12:42:15 [TRACE] dag/walk: walking "root"
+2018/09/20 12:42:15 [TRACE] vertex 'root.root': walking
+2018/09/20 12:42:15 [INFO] backend/local: apply calling Refresh
+2018/09/20 12:42:15 [INFO] terraform: building graph: GraphTypeRefresh
+2018/09/20 12:42:15 [TRACE] No managed resources in state during refresh, skipping managed resource transformer
+2018/09/20 12:42:15 [TRACE] ConfigTransformer: Starting for path: []
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.ConfigTransformer:
+
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.OrphanResourceTransformer:
+
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.AttachStateTransformer:
+
+2018/09/20 12:42:15 [TRACE] AttachResourceConfigTransformer: Beginning...
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.AttachResourceConfigTransformer:
+
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.RootVariableTransformer:
+
+2018/09/20 12:42:15 [TRACE] ProviderConfigTransformer: Starting for path: []
+2018/09/20 12:42:15 [TRACE] Attach provider request: []string{} gocd
+2018/09/20 12:42:15 [TRACE] Attaching provider config: *config.ProviderConfig{Name:"gocd", Alias:"", Version:"", RawConfig:(*config.RawConfig)(0xc420407e30)}
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.ProviderConfigTransformer:
+
+provider.gocd - *terraform.NodeApplyableProvider
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.MissingProviderTransformer:
+
+provider.gocd - *terraform.NodeApplyableProvider
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.ProviderTransformer:
+
+provider.gocd - *terraform.NodeApplyableProvider
+2018/09/20 12:42:15 [DEBUG] pruning unused provider provider.gocd
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.PruneProviderTransformer:
+
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.ParentProviderTransformer:
+
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.graphTransformerMulti:
+
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.LocalTransformer:
+
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.OutputTransformer:
+
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.ModuleVariableTransformer:
+
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.ReferenceTransformer:
+
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.TargetsTransformer:
+
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.CloseProviderTransformer:
+
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.RootTransformer:
+
+root - terraform.graphNodeRoot
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.TransitiveReductionTransformer:
+
+root - terraform.graphNodeRoot
+2018/09/20 12:42:15 [DEBUG] Starting graph walk: walkRefresh
+2018/09/20 12:42:15 [TRACE] dag/walk: added new vertex: "root"
+2018/09/20 12:42:15 [TRACE] dag/walk: walking "root"
+2018/09/20 12:42:15 [TRACE] vertex 'root.root': walking
+2018/09/20 12:42:15 [INFO] backend/local: apply calling Plan
+2018/09/20 12:42:15 [INFO] terraform: building graph: GraphTypePlan
+2018/09/20 12:42:15 [TRACE] ConfigTransformer: Starting for path: []
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.ConfigTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodePlannableResource
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.LocalTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodePlannableResource
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.OutputTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodePlannableResource
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.OrphanResourceTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodePlannableResource
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.OrphanOutputTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodePlannableResource
+2018/09/20 12:42:15 [TRACE] AttachResourceConfigTransformer: Beginning...
+2018/09/20 12:42:15 [TRACE] AttachResourceConfigTransformer: Attach resource config request: gocd_pipeline_stage.build
+2018/09/20 12:42:15 [TRACE] Attaching resource config: &config.Resource{Mode:0, Name:"build", Type:"gocd_pipeline_stage", RawCount:(*config.RawConfig)(0xc420407f10), RawConfig:(*config.RawConfig)(0xc420407ea0), Provisioners:[]*config.Provisioner(nil), Provider:"", DependsOn:[]string(nil), Lifecycle:config.ResourceLifecycle{CreateBeforeDestroy:false, PreventDestroy:false, IgnoreChanges:[]string(nil)}}
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.AttachResourceConfigTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodePlannableResource
+2018/09/20 12:42:15 [DEBUG] Resource state not found for "gocd_pipeline_stage.build": gocd_pipeline_stage.build
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.AttachStateTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodePlannableResource
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.RootVariableTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodePlannableResource
+2018/09/20 12:42:15 [TRACE] ProviderConfigTransformer: Starting for path: []
+2018/09/20 12:42:15 [TRACE] Attach provider request: []string{} gocd
+2018/09/20 12:42:15 [TRACE] Attaching provider config: *config.ProviderConfig{Name:"gocd", Alias:"", Version:"", RawConfig:(*config.RawConfig)(0xc420407e30)}
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.ProviderConfigTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodePlannableResource
+provider.gocd - *terraform.NodeApplyableProvider
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.MissingProviderTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodePlannableResource
+provider.gocd - *terraform.NodeApplyableProvider
+2018/09/20 12:42:15 [DEBUG] resource gocd_pipeline_stage.build using provider provider.gocd
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.ProviderTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodePlannableResource
+  provider.gocd - *terraform.NodeApplyableProvider
+provider.gocd - *terraform.NodeApplyableProvider
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.PruneProviderTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodePlannableResource
+  provider.gocd - *terraform.NodeApplyableProvider
+provider.gocd - *terraform.NodeApplyableProvider
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.ParentProviderTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodePlannableResource
+  provider.gocd - *terraform.NodeApplyableProvider
+provider.gocd - *terraform.NodeApplyableProvider
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.graphTransformerMulti:
+
+gocd_pipeline_stage.build - *terraform.NodePlannableResource
+  provider.gocd - *terraform.NodeApplyableProvider
+provider.gocd - *terraform.NodeApplyableProvider
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.ModuleVariableTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodePlannableResource
+  provider.gocd - *terraform.NodeApplyableProvider
+provider.gocd - *terraform.NodeApplyableProvider
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.RemovedModuleTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodePlannableResource
+  provider.gocd - *terraform.NodeApplyableProvider
+provider.gocd - *terraform.NodeApplyableProvider
+2018/09/20 12:42:15 [DEBUG] ReferenceTransformer: "gocd_pipeline_stage.build" references: []
+2018/09/20 12:42:15 [DEBUG] ReferenceTransformer: "provider.gocd" references: []
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.ReferenceTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodePlannableResource
+  provider.gocd - *terraform.NodeApplyableProvider
+provider.gocd - *terraform.NodeApplyableProvider
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.CountBoundaryTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodePlannableResource
+  provider.gocd - *terraform.NodeApplyableProvider
+meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  gocd_pipeline_stage.build - *terraform.NodePlannableResource
+  provider.gocd - *terraform.NodeApplyableProvider
+provider.gocd - *terraform.NodeApplyableProvider
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.TargetsTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodePlannableResource
+  provider.gocd - *terraform.NodeApplyableProvider
+meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  gocd_pipeline_stage.build - *terraform.NodePlannableResource
+  provider.gocd - *terraform.NodeApplyableProvider
+provider.gocd - *terraform.NodeApplyableProvider
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.CloseProviderTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodePlannableResource
+  provider.gocd - *terraform.NodeApplyableProvider
+meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  gocd_pipeline_stage.build - *terraform.NodePlannableResource
+  provider.gocd - *terraform.NodeApplyableProvider
+provider.gocd - *terraform.NodeApplyableProvider
+provider.gocd (close) - *terraform.graphNodeCloseProvider
+  gocd_pipeline_stage.build - *terraform.NodePlannableResource
+  provider.gocd - *terraform.NodeApplyableProvider
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.CloseProvisionerTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodePlannableResource
+  provider.gocd - *terraform.NodeApplyableProvider
+meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  gocd_pipeline_stage.build - *terraform.NodePlannableResource
+  provider.gocd - *terraform.NodeApplyableProvider
+provider.gocd - *terraform.NodeApplyableProvider
+provider.gocd (close) - *terraform.graphNodeCloseProvider
+  gocd_pipeline_stage.build - *terraform.NodePlannableResource
+  provider.gocd - *terraform.NodeApplyableProvider
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.RootTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodePlannableResource
+  provider.gocd - *terraform.NodeApplyableProvider
+meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  gocd_pipeline_stage.build - *terraform.NodePlannableResource
+  provider.gocd - *terraform.NodeApplyableProvider
+provider.gocd - *terraform.NodeApplyableProvider
+provider.gocd (close) - *terraform.graphNodeCloseProvider
+  gocd_pipeline_stage.build - *terraform.NodePlannableResource
+  provider.gocd - *terraform.NodeApplyableProvider
+root - terraform.graphNodeRoot
+  meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  provider.gocd (close) - *terraform.graphNodeCloseProvider
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.TransitiveReductionTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodePlannableResource
+  provider.gocd - *terraform.NodeApplyableProvider
+meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  gocd_pipeline_stage.build - *terraform.NodePlannableResource
+provider.gocd - *terraform.NodeApplyableProvider
+provider.gocd (close) - *terraform.graphNodeCloseProvider
+  gocd_pipeline_stage.build - *terraform.NodePlannableResource
+root - terraform.graphNodeRoot
+  meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  provider.gocd (close) - *terraform.graphNodeCloseProvider
+2018/09/20 12:42:15 [DEBUG] Starting graph walk: walkPlan
+2018/09/20 12:42:15 [TRACE] dag/walk: added new vertex: "provider.gocd"
+2018/09/20 12:42:15 [TRACE] dag/walk: added new vertex: "meta.count-boundary (count boundary fixup)"
+2018/09/20 12:42:15 [TRACE] dag/walk: added new vertex: "provider.gocd (close)"
+2018/09/20 12:42:15 [TRACE] dag/walk: added new vertex: "root"
+2018/09/20 12:42:15 [TRACE] dag/walk: added new vertex: "gocd_pipeline_stage.build"
+2018/09/20 12:42:15 [TRACE] dag/walk: added edge: "root" waiting on "provider.gocd (close)"
+2018/09/20 12:42:15 [TRACE] dag/walk: added edge: "root" waiting on "meta.count-boundary (count boundary fixup)"
+2018/09/20 12:42:15 [TRACE] dag/walk: added edge: "gocd_pipeline_stage.build" waiting on "provider.gocd"
+2018/09/20 12:42:15 [TRACE] dag/walk: added edge: "meta.count-boundary (count boundary fixup)" waiting on "gocd_pipeline_stage.build"
+2018/09/20 12:42:15 [TRACE] dag/walk: added edge: "provider.gocd (close)" waiting on "gocd_pipeline_stage.build"
+2018/09/20 12:42:15 [TRACE] dag/walk: dependencies changed for "provider.gocd (close)", sending new deps
+2018/09/20 12:42:15 [TRACE] dag/walk: dependencies changed for "root", sending new deps
+2018/09/20 12:42:15 [TRACE] dag/walk: dependencies changed for "gocd_pipeline_stage.build", sending new deps
+2018/09/20 12:42:15 [TRACE] dag/walk: dependencies changed for "meta.count-boundary (count boundary fixup)", sending new deps
+2018/09/20 12:42:15 [TRACE] dag/walk: walking "provider.gocd"
+2018/09/20 12:42:15 [TRACE] vertex 'root.provider.gocd': walking
+2018/09/20 12:42:15 [TRACE] vertex 'root.provider.gocd': evaluating
+2018/09/20 12:42:15 [TRACE] [walkPlan] Entering eval tree: provider.gocd
+2018/09/20 12:42:15 [TRACE] root: eval: *terraform.EvalSequence
+2018/09/20 12:42:15 [TRACE] root: eval: *terraform.EvalInitProvider
+2018/09/20 12:42:15 [TRACE] root: eval: terraform.EvalNoop
+2018/09/20 12:42:15 [TRACE] root: eval: terraform.EvalNoop
+2018/09/20 12:42:15 [TRACE] root: eval: *terraform.EvalOpFilter
+2018/09/20 12:42:15 [TRACE] root: eval: *terraform.EvalSequence
+2018/09/20 12:42:15 [TRACE] root: eval: *terraform.EvalGetProvider
+2018/09/20 12:42:15 [TRACE] root: eval: *terraform.EvalInterpolateProvider
+2018/09/20 12:42:15 [TRACE] root: eval: *terraform.EvalBuildProviderConfig
+2018/09/20 12:42:15 [TRACE] root: eval: *terraform.EvalOpFilter
+2018/09/20 12:42:15 [TRACE] root: eval: *terraform.EvalSequence
+2018/09/20 12:42:15 [TRACE] root: eval: *terraform.EvalConfigProvider
+2018-09-20T12:42:15.136+0530 [DEBUG] plugin.terraform-provider-gocd: 2018/09/20 12:42:15 [DEBUG] Using GoCD config 'baseurl': 127.0.0.1:8153/
+2018-09-20T12:42:15.136+0530 [DEBUG] plugin.terraform-provider-gocd: 2018/09/20 12:42:15 [DEBUG] Using GoCD config 'username':
+2018-09-20T12:42:15.136+0530 [DEBUG] plugin.terraform-provider-gocd: 2018/09/20 12:42:15 [DEBUG] Using GoCD config 'password':
+2018-09-20T12:42:15.136+0530 [DEBUG] plugin.terraform-provider-gocd: 2018/09/20 12:42:15 [DEBUG] Using GoCD config 'skip_ssl_check': true
+2018/09/20 12:42:15 [TRACE] [walkPlan] Exiting eval tree: provider.gocd
+2018/09/20 12:42:15 [TRACE] dag/walk: walking "gocd_pipeline_stage.build"
+2018/09/20 12:42:15 [TRACE] vertex 'root.gocd_pipeline_stage.build': walking
+2018/09/20 12:42:15 [TRACE] vertex 'root.gocd_pipeline_stage.build': evaluating
+2018/09/20 12:42:15 [TRACE] [walkPlan] Entering eval tree: gocd_pipeline_stage.build
+2018/09/20 12:42:15 [TRACE] root: eval: *terraform.EvalSequence
+2018/09/20 12:42:15 [TRACE] root: eval: *terraform.EvalInterpolate
+2018/09/20 12:42:15 [TRACE] root: eval: *terraform.EvalCountCheckComputed
+2018/09/20 12:42:15 [TRACE] root: eval: *terraform.EvalIf
+2018/09/20 12:42:15 [TRACE] root: eval: *terraform.EvalCountFixZeroOneBoundary
+2018/09/20 12:42:15 [TRACE] [walkPlan] Exiting eval tree: gocd_pipeline_stage.build
+2018/09/20 12:42:15 [TRACE] vertex 'root.gocd_pipeline_stage.build': expanding/walking dynamic subgraph
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.ResourceCountTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodePlannableResourceInstance
+2018/09/20 12:42:15 [TRACE] OrphanResourceCount: Starting...
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.OrphanResourceCountTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodePlannableResourceInstance
+2018/09/20 12:42:15 [DEBUG] Resource state not found for "gocd_pipeline_stage.build": gocd_pipeline_stage.build
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.AttachStateTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodePlannableResourceInstance
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.TargetsTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodePlannableResourceInstance
+2018/09/20 12:42:15 [DEBUG] ReferenceTransformer: "gocd_pipeline_stage.build" references: []
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.ReferenceTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodePlannableResourceInstance
+2018/09/20 12:42:15 [TRACE] Graph after step *terraform.RootTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodePlannableResourceInstance
+2018/09/20 12:42:15 [TRACE] dag/walk: added new vertex: "gocd_pipeline_stage.build"
+2018/09/20 12:42:15 [TRACE] dag/walk: walking "gocd_pipeline_stage.build"
+2018/09/20 12:42:15 [TRACE] vertex 'root.gocd_pipeline_stage.build': walking
+2018/09/20 12:42:15 [TRACE] vertex 'root.gocd_pipeline_stage.build': evaluating
+2018/09/20 12:42:15 [TRACE] [walkPlan] Entering eval tree: gocd_pipeline_stage.build
+2018/09/20 12:42:15 [TRACE] root: eval: *terraform.EvalSequence
+2018/09/20 12:42:15 [TRACE] root: eval: *terraform.EvalInterpolate
+2018/09/20 12:42:15 [TRACE] root: eval: *terraform.EvalGetProvider
+2018/09/20 12:42:15 [TRACE] root: eval: *terraform.EvalValidateResource
+2018/09/20 12:42:15 [TRACE] root: eval: *terraform.EvalReadState
+2018/09/20 12:42:15 [TRACE] root: eval: *terraform.EvalDiff
+2018/09/20 12:42:15 [TRACE] root: eval: *terraform.EvalCheckPreventDestroy
+2018/09/20 12:42:15 [TRACE] root: eval: *terraform.EvalWriteState
+2018/09/20 12:42:15 [TRACE] root: eval: *terraform.EvalWriteDiff
+2018/09/20 12:42:15 [TRACE] [walkPlan] Exiting eval tree: gocd_pipeline_stage.build
+2018/09/20 12:42:15 [TRACE] dag/walk: walking "meta.count-boundary (count boundary fixup)"
+2018/09/20 12:42:15 [TRACE] vertex 'root.meta.count-boundary (count boundary fixup)': walking
+2018/09/20 12:42:15 [TRACE] vertex 'root.meta.count-boundary (count boundary fixup)': evaluating
+2018/09/20 12:42:15 [TRACE] [walkPlan] Entering eval tree: meta.count-boundary (count boundary fixup)
+2018/09/20 12:42:15 [TRACE] root: eval: *terraform.EvalCountFixZeroOneBoundaryGlobal
+2018/09/20 12:42:15 [TRACE] [walkPlan] Exiting eval tree: meta.count-boundary (count boundary fixup)
+2018/09/20 12:42:15 [TRACE] dag/walk: walking "provider.gocd (close)"
+2018/09/20 12:42:15 [TRACE] vertex 'root.provider.gocd (close)': walking
+2018/09/20 12:42:15 [TRACE] vertex 'root.provider.gocd (close)': evaluating
+2018/09/20 12:42:15 [TRACE] [walkPlan] Entering eval tree: provider.gocd (close)
+2018/09/20 12:42:15 [TRACE] root: eval: *terraform.EvalCloseProvider
+2018/09/20 12:42:15 [TRACE] [walkPlan] Exiting eval tree: provider.gocd (close)
+2018/09/20 12:42:15 [TRACE] dag/walk: walking "root"
+2018/09/20 12:42:15 [TRACE] vertex 'root.root': walking
+2018/09/20 12:42:15 [DEBUG] command: asking for input: "Do you want to perform these actions?"
+2018/09/20 12:42:16 [INFO] terraform: building graph: GraphTypeApply
+2018/09/20 12:42:16 [TRACE] DiffTransformer: starting
+2018/09/20 12:42:16 [TRACE] DiffTransformer: Module: CREATE: gocd_pipeline_stage.build
+  clean_working_directory: "" => "false"
+  fetch_materials:         "" => "true"
+  jobs.#:                  "" => "1"
+  jobs.0:                  "" => " {\n  \"name\": \"plan\",\n  \"tasks\": \n  [\n  {\n    \"type\": \"ant\",\n    \"attributes\": \n    {\n      \"run_if\": [\"passed\"],\n      \"build_file\": \"https://github.com/Keshav-Rai001/terraform-with-gocd/blob/master/build.xml\",\n      \"target\": \"https://github.com/Keshav-Rai001/terraform-with-gocd/blob/master/helloWorld.java\"\n      \n    }\n  }\n  ]\n }\n"
+  name:                    "" => "plan"
+  never_cleanup_artifacts: "" => "false"
+  pipeline:                "" => "plan" (forces new resource)
+2018/09/20 12:42:16 [TRACE] DiffTransformer: Resource "gocd_pipeline_stage.build": *terraform.InstanceDiff{mu:sync.Mutex{state:0, sema:0x0}, Attributes:map[string]*terraform.ResourceAttrDiff{"jobs.#":*terraform.ResourceAttrDiff{Old:"", New:"1", NewComputed:false, NewRemoved:false, NewExtra:interface {}(nil), RequiresNew:false, Sensitive:false, Type:0x0}, "jobs.0":*terraform.ResourceAttrDiff{Old:"", New:" {\n  \"name\": \"plan\",\n  \"tasks\": \n  [\n  {\n    \"type\": \"ant\",\n    \"attributes\": \n    {\n      \"run_if\": [\"passed\"],\n      \"build_file\": \"https://github.com/Keshav-Rai001/terraform-with-gocd/blob/master/build.xml\",\n      \"target\": \"https://github.com/Keshav-Rai001/terraform-with-gocd/blob/master/helloWorld.java\"\n      \n    }\n  }\n  ]\n }\n", NewComputed:false, NewRemoved:false, NewExtra:interface {}(nil), RequiresNew:false, Sensitive:false, Type:0x0}, "pipeline":*terraform.ResourceAttrDiff{Old:"", New:"plan", NewComputed:false, NewRemoved:false, NewExtra:interface {}(nil), RequiresNew:true, Sensitive:false, Type:0x0}, "fetch_materials":*terraform.ResourceAttrDiff{Old:"", New:"true", NewComputed:false, NewRemoved:false, NewExtra:interface {}(nil), RequiresNew:false, Sensitive:false, Type:0x0}, "clean_working_directory":*terraform.ResourceAttrDiff{Old:"", New:"false", NewComputed:false, NewRemoved:false, NewExtra:interface {}(nil), RequiresNew:false, Sensitive:false, Type:0x0}, "id":*terraform.ResourceAttrDiff{Old:"", New:"", NewComputed:true, NewRemoved:false, NewExtra:interface {}(nil), RequiresNew:true, Sensitive:false, Type:0x2}, "never_cleanup_artifacts":*terraform.ResourceAttrDiff{Old:"", New:"false", NewComputed:false, NewRemoved:false, NewExtra:interface {}(nil), RequiresNew:false, Sensitive:false, Type:0x0}, "name":*terraform.ResourceAttrDiff{Old:"", New:"plan", NewComputed:false, NewRemoved:false, NewExtra:interface {}(nil), RequiresNew:false, Sensitive:false, Type:0x0}}, Destroy:false, DestroyDeposed:false, DestroyTainted:false, Meta:map[string]interface {}(nil)}
+2018/09/20 12:42:16 [TRACE] Graph after step *terraform.DiffTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodeApplyableResource
+2018/09/20 12:42:16 [TRACE] Graph after step *terraform.OrphanOutputTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodeApplyableResource
+2018/09/20 12:42:16 [TRACE] AttachResourceConfigTransformer: Beginning...
+2018/09/20 12:42:16 [TRACE] AttachResourceConfigTransformer: Attach resource config request: gocd_pipeline_stage.build
+2018/09/20 12:42:16 [TRACE] Attaching resource config: &config.Resource{Mode:0, Name:"build", Type:"gocd_pipeline_stage", RawCount:(*config.RawConfig)(0xc420407f10), RawConfig:(*config.RawConfig)(0xc420407ea0), Provisioners:[]*config.Provisioner(nil), Provider:"", DependsOn:[]string(nil), Lifecycle:config.ResourceLifecycle{CreateBeforeDestroy:false, PreventDestroy:false, IgnoreChanges:[]string(nil)}}
+2018/09/20 12:42:16 [TRACE] Graph after step *terraform.AttachResourceConfigTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodeApplyableResource
+2018/09/20 12:42:16 [DEBUG] Resource state not found for "gocd_pipeline_stage.build": gocd_pipeline_stage.build
+2018/09/20 12:42:16 [TRACE] Graph after step *terraform.AttachStateTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodeApplyableResource
+2018/09/20 12:42:16 [TRACE] ProviderConfigTransformer: Starting for path: []
+2018/09/20 12:42:16 [TRACE] Attach provider request: []string{} gocd
+2018/09/20 12:42:16 [TRACE] Attaching provider config: *config.ProviderConfig{Name:"gocd", Alias:"", Version:"", RawConfig:(*config.RawConfig)(0xc420407e30)}
+2018/09/20 12:42:16 [TRACE] Graph after step *terraform.ProviderConfigTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodeApplyableResource
+provider.gocd - *terraform.NodeApplyableProvider
+2018/09/20 12:42:16 [TRACE] Graph after step *terraform.MissingProviderTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodeApplyableResource
+provider.gocd - *terraform.NodeApplyableProvider
+2018/09/20 12:42:16 [DEBUG] resource gocd_pipeline_stage.build using provider provider.gocd
+2018/09/20 12:42:16 [TRACE] Graph after step *terraform.ProviderTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodeApplyableResource
+  provider.gocd - *terraform.NodeApplyableProvider
+provider.gocd - *terraform.NodeApplyableProvider
+2018/09/20 12:42:16 [TRACE] Graph after step *terraform.PruneProviderTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodeApplyableResource
+  provider.gocd - *terraform.NodeApplyableProvider
+provider.gocd - *terraform.NodeApplyableProvider
+2018/09/20 12:42:16 [TRACE] Graph after step *terraform.ParentProviderTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodeApplyableResource
+  provider.gocd - *terraform.NodeApplyableProvider
+provider.gocd - *terraform.NodeApplyableProvider
+2018/09/20 12:42:16 [TRACE] Graph after step *terraform.graphTransformerMulti:
+
+gocd_pipeline_stage.build - *terraform.NodeApplyableResource
+  provider.gocd - *terraform.NodeApplyableProvider
+provider.gocd - *terraform.NodeApplyableProvider
+2018/09/20 12:42:16 [TRACE] DestroyEdgeTransformer: Beginning destroy edge transformation...
+2018/09/20 12:42:16 [TRACE] Graph after step *terraform.DestroyEdgeTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodeApplyableResource
+  provider.gocd - *terraform.NodeApplyableProvider
+provider.gocd - *terraform.NodeApplyableProvider
+2018/09/20 12:42:16 [TRACE] CBDEdgeTransformer: Beginning CBD transformation...
+2018/09/20 12:42:16 [TRACE] Graph after step *terraform.CBDEdgeTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodeApplyableResource
+  provider.gocd - *terraform.NodeApplyableProvider
+provider.gocd - *terraform.NodeApplyableProvider
+2018/09/20 12:42:16 [TRACE] Graph after step *terraform.MissingProvisionerTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodeApplyableResource
+  provider.gocd - *terraform.NodeApplyableProvider
+provider.gocd - *terraform.NodeApplyableProvider
+2018/09/20 12:42:16 [TRACE] Graph after step *terraform.ProvisionerTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodeApplyableResource
+  provider.gocd - *terraform.NodeApplyableProvider
+provider.gocd - *terraform.NodeApplyableProvider
+2018/09/20 12:42:16 [TRACE] Graph after step *terraform.RootVariableTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodeApplyableResource
+  provider.gocd - *terraform.NodeApplyableProvider
+provider.gocd - *terraform.NodeApplyableProvider
+2018/09/20 12:42:16 [TRACE] Graph after step *terraform.LocalTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodeApplyableResource
+  provider.gocd - *terraform.NodeApplyableProvider
+provider.gocd - *terraform.NodeApplyableProvider
+2018/09/20 12:42:16 [TRACE] Graph after step *terraform.OutputTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodeApplyableResource
+  provider.gocd - *terraform.NodeApplyableProvider
+provider.gocd - *terraform.NodeApplyableProvider
+2018/09/20 12:42:16 [TRACE] Graph after step *terraform.ModuleVariableTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodeApplyableResource
+  provider.gocd - *terraform.NodeApplyableProvider
+provider.gocd - *terraform.NodeApplyableProvider
+2018/09/20 12:42:16 [TRACE] Graph after step *terraform.RemovedModuleTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodeApplyableResource
+  provider.gocd - *terraform.NodeApplyableProvider
+provider.gocd - *terraform.NodeApplyableProvider
+2018/09/20 12:42:16 [DEBUG] ReferenceTransformer: "gocd_pipeline_stage.build" references: []
+2018/09/20 12:42:16 [DEBUG] ReferenceTransformer: "provider.gocd" references: []
+2018/09/20 12:42:16 [TRACE] Graph after step *terraform.ReferenceTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodeApplyableResource
+  provider.gocd - *terraform.NodeApplyableProvider
+provider.gocd - *terraform.NodeApplyableProvider
+2018/09/20 12:42:16 [TRACE] Graph after step *terraform.CountBoundaryTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodeApplyableResource
+  provider.gocd - *terraform.NodeApplyableProvider
+meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  gocd_pipeline_stage.build - *terraform.NodeApplyableResource
+  provider.gocd - *terraform.NodeApplyableProvider
+provider.gocd - *terraform.NodeApplyableProvider
+2018/09/20 12:42:16 [TRACE] Graph after step *terraform.TargetsTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodeApplyableResource
+  provider.gocd - *terraform.NodeApplyableProvider
+meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  gocd_pipeline_stage.build - *terraform.NodeApplyableResource
+  provider.gocd - *terraform.NodeApplyableProvider
+provider.gocd - *terraform.NodeApplyableProvider
+2018/09/20 12:42:16 [TRACE] Graph after step *terraform.CloseProviderTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodeApplyableResource
+  provider.gocd - *terraform.NodeApplyableProvider
+meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  gocd_pipeline_stage.build - *terraform.NodeApplyableResource
+  provider.gocd - *terraform.NodeApplyableProvider
+provider.gocd - *terraform.NodeApplyableProvider
+provider.gocd (close) - *terraform.graphNodeCloseProvider
+  gocd_pipeline_stage.build - *terraform.NodeApplyableResource
+  provider.gocd - *terraform.NodeApplyableProvider
+2018/09/20 12:42:16 [TRACE] Graph after step *terraform.CloseProvisionerTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodeApplyableResource
+  provider.gocd - *terraform.NodeApplyableProvider
+meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  gocd_pipeline_stage.build - *terraform.NodeApplyableResource
+  provider.gocd - *terraform.NodeApplyableProvider
+provider.gocd - *terraform.NodeApplyableProvider
+provider.gocd (close) - *terraform.graphNodeCloseProvider
+  gocd_pipeline_stage.build - *terraform.NodeApplyableResource
+  provider.gocd - *terraform.NodeApplyableProvider
+2018/09/20 12:42:16 [TRACE] Graph after step *terraform.RootTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodeApplyableResource
+  provider.gocd - *terraform.NodeApplyableProvider
+meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  gocd_pipeline_stage.build - *terraform.NodeApplyableResource
+  provider.gocd - *terraform.NodeApplyableProvider
+provider.gocd - *terraform.NodeApplyableProvider
+provider.gocd (close) - *terraform.graphNodeCloseProvider
+  gocd_pipeline_stage.build - *terraform.NodeApplyableResource
+  provider.gocd - *terraform.NodeApplyableProvider
+root - terraform.graphNodeRoot
+  meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  provider.gocd (close) - *terraform.graphNodeCloseProvider
+2018/09/20 12:42:16 [TRACE] Graph after step *terraform.TransitiveReductionTransformer:
+
+gocd_pipeline_stage.build - *terraform.NodeApplyableResource
+  provider.gocd - *terraform.NodeApplyableProvider
+meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  gocd_pipeline_stage.build - *terraform.NodeApplyableResource
+provider.gocd - *terraform.NodeApplyableProvider
+provider.gocd (close) - *terraform.graphNodeCloseProvider
+  gocd_pipeline_stage.build - *terraform.NodeApplyableResource
+root - terraform.graphNodeRoot
+  meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  provider.gocd (close) - *terraform.graphNodeCloseProvider
+2018/09/20 12:42:16 [DEBUG] Starting graph walk: walkApply
+2018/09/20 12:42:16 [TRACE] dag/walk: added new vertex: "gocd_pipeline_stage.build"
+2018/09/20 12:42:16 [TRACE] dag/walk: added new vertex: "provider.gocd"
+2018/09/20 12:42:16 [TRACE] dag/walk: added new vertex: "meta.count-boundary (count boundary fixup)"
+2018/09/20 12:42:16 [TRACE] dag/walk: added new vertex: "provider.gocd (close)"
+2018/09/20 12:42:16 [TRACE] dag/walk: added new vertex: "root"
+2018/09/20 12:42:16 [TRACE] dag/walk: added edge: "root" waiting on "provider.gocd (close)"
+2018/09/20 12:42:16 [TRACE] dag/walk: added edge: "gocd_pipeline_stage.build" waiting on "provider.gocd"
+2018/09/20 12:42:16 [TRACE] dag/walk: added edge: "meta.count-boundary (count boundary fixup)" waiting on "gocd_pipeline_stage.build"
+2018/09/20 12:42:16 [TRACE] dag/walk: added edge: "provider.gocd (close)" waiting on "gocd_pipeline_stage.build"
+2018/09/20 12:42:16 [TRACE] dag/walk: added edge: "root" waiting on "meta.count-boundary (count boundary fixup)"
+2018/09/20 12:42:16 [TRACE] dag/walk: dependencies changed for "root", sending new deps
+2018/09/20 12:42:16 [TRACE] dag/walk: dependencies changed for "gocd_pipeline_stage.build", sending new deps
+2018/09/20 12:42:16 [TRACE] dag/walk: dependencies changed for "meta.count-boundary (count boundary fixup)", sending new deps
+2018/09/20 12:42:16 [TRACE] dag/walk: dependencies changed for "provider.gocd (close)", sending new deps
+2018/09/20 12:42:16 [TRACE] dag/walk: walking "provider.gocd"
+2018/09/20 12:42:16 [TRACE] vertex 'root.provider.gocd': walking
+2018/09/20 12:42:16 [TRACE] vertex 'root.provider.gocd': evaluating
+2018/09/20 12:42:16 [TRACE] [walkApply] Entering eval tree: provider.gocd
+2018/09/20 12:42:16 [TRACE] root: eval: *terraform.EvalSequence
+2018/09/20 12:42:16 [TRACE] root: eval: *terraform.EvalInitProvider
+2018/09/20 12:42:16 [TRACE] root: eval: terraform.EvalNoop
+2018/09/20 12:42:16 [TRACE] root: eval: terraform.EvalNoop
+2018/09/20 12:42:16 [TRACE] root: eval: *terraform.EvalOpFilter
+2018/09/20 12:42:16 [TRACE] root: eval: *terraform.EvalSequence
+2018/09/20 12:42:16 [TRACE] root: eval: *terraform.EvalGetProvider
+2018/09/20 12:42:16 [TRACE] root: eval: *terraform.EvalInterpolateProvider
+2018/09/20 12:42:16 [TRACE] root: eval: *terraform.EvalBuildProviderConfig
+2018/09/20 12:42:16 [TRACE] root: eval: *terraform.EvalOpFilter
+2018/09/20 12:42:16 [TRACE] root: eval: *terraform.EvalSequence
+2018/09/20 12:42:16 [TRACE] root: eval: *terraform.EvalConfigProvider
+2018-09-20T12:42:16.534+0530 [DEBUG] plugin.terraform-provider-gocd: 2018/09/20 12:42:16 [DEBUG] Using GoCD config 'baseurl': 127.0.0.1:8153/
+2018-09-20T12:42:16.534+0530 [DEBUG] plugin.terraform-provider-gocd: 2018/09/20 12:42:16 [DEBUG] Using GoCD config 'username':
+2018-09-20T12:42:16.534+0530 [DEBUG] plugin.terraform-provider-gocd: 2018/09/20 12:42:16 [DEBUG] Using GoCD config 'password':
+2018-09-20T12:42:16.534+0530 [DEBUG] plugin.terraform-provider-gocd: 2018/09/20 12:42:16 [DEBUG] Using GoCD config 'skip_ssl_check': true
+2018/09/20 12:42:16 [TRACE] [walkApply] Exiting eval tree: provider.gocd
+2018/09/20 12:42:16 [TRACE] dag/walk: walking "gocd_pipeline_stage.build"
+2018/09/20 12:42:16 [TRACE] vertex 'root.gocd_pipeline_stage.build': walking
+2018/09/20 12:42:16 [TRACE] vertex 'root.gocd_pipeline_stage.build': evaluating
+2018/09/20 12:42:16 [TRACE] [walkApply] Entering eval tree: gocd_pipeline_stage.build
+2018/09/20 12:42:16 [TRACE] root: eval: *terraform.EvalSequence
+2018/09/20 12:42:16 [TRACE] root: eval: *terraform.EvalInstanceInfo
+2018/09/20 12:42:16 [TRACE] root: eval: *terraform.EvalReadDiff
+2018/09/20 12:42:16 [TRACE] root: eval: *terraform.EvalIf
+2018/09/20 12:42:16 [TRACE] root: eval: terraform.EvalNoop
+2018/09/20 12:42:16 [TRACE] root: eval: *terraform.EvalIf
+2018/09/20 12:42:16 [TRACE] root: eval: *terraform.EvalInterpolate
+2018/09/20 12:42:16 [TRACE] root: eval: *terraform.EvalInterpolate
+2018/09/20 12:42:16 [TRACE] root: eval: *terraform.EvalGetProvider
+2018/09/20 12:42:16 [TRACE] root: eval: *terraform.EvalReadState
+2018/09/20 12:42:16 [TRACE] root: eval: *terraform.EvalValidateResource
+2018/09/20 12:42:16 [TRACE] root: eval: *terraform.EvalDiff
+2018/09/20 12:42:16 [TRACE] root: eval: *terraform.EvalReadDiff
+2018/09/20 12:42:16 [TRACE] root: eval: *terraform.EvalCompareDiff
+2018/09/20 12:42:16 [TRACE] root: eval: *terraform.EvalGetProvider
+2018/09/20 12:42:16 [TRACE] root: eval: *terraform.EvalReadState
+2018/09/20 12:42:16 [TRACE] root: eval: *terraform.EvalApplyPre
+2018/09/20 12:42:16 [TRACE] root: eval: *terraform.EvalApply
+2018/09/20 12:42:16 [DEBUG] apply: gocd_pipeline_stage.build: executing Apply
+2018-09-20T12:42:16.539+0530 [DEBUG] plugin.terraform-provider-gocd: panic: runtime error: invalid memory address or nil pointer dereference
+2018-09-20T12:42:16.539+0530 [DEBUG] plugin.terraform-provider-gocd: [signal SIGSEGV: segmentation violation code=0x1 addr=0x8 pc=0x68de07]
+2018-09-20T12:42:16.539+0530 [DEBUG] plugin.terraform-provider-gocd: 
+2018-09-20T12:42:16.539+0530 [DEBUG] plugin.terraform-provider-gocd: goroutine 25 [running]:
+2018-09-20T12:42:16.539+0530 [DEBUG] plugin.terraform-provider-gocd: net/url.(*URL).ResolveReference(0x0, 0xc000424000, 0xc000424000)
+2018-09-20T12:42:16.539+0530 [DEBUG] plugin.terraform-provider-gocd: 	/usr/local/go/src/net/url/url.go:976 +0x77
+2018-09-20T12:42:16.539+0530 [DEBUG] plugin.terraform-provider-gocd: github.com/beamly/go-gocd/gocd.(*Client).NewRequest(0xc000253680, 0xe25303, 0x3, 0xe294d1, 0x7, 0x0, 0x0, 0xe3cb02, 0x1d, 0xaefeea, ...)
+2018-09-20T12:42:16.539+0530 [DEBUG] plugin.terraform-provider-gocd: 	/home/keshav/go/src/github.com/beamly/go-gocd/gocd/gocd.go:217 +0x123
+2018-09-20T12:42:16.539+0530 [DEBUG] plugin.terraform-provider-gocd: github.com/beamly/go-gocd/gocd.(*Client).httpAction(0xc000253680, 0xf94e60, 0xc0000ca030, 0xc0000176a0, 0x40ded8, 0x60, 0x0, 0x1, 0xc0000d02a0)
+2018-09-20T12:42:16.539+0530 [DEBUG] plugin.terraform-provider-gocd: 	/home/keshav/go/src/github.com/beamly/go-gocd/gocd/genericactions.go:101 +0x382
+2018-09-20T12:42:16.539+0530 [DEBUG] plugin.terraform-provider-gocd: github.com/beamly/go-gocd/gocd.(*Client).getAction(0xc000253680, 0xf94e60, 0xc0000ca030, 0xc0000176a0, 0xf840a0, 0xcb7480, 0xc000406d40, 0x0, 0x3a96056c00000000)
+2018-09-20T12:42:16.539+0530 [DEBUG] plugin.terraform-provider-gocd: 	/home/keshav/go/src/github.com/beamly/go-gocd/gocd/genericactions.go:46 +0x68
+2018-09-20T12:42:16.539+0530 [DEBUG] plugin.terraform-provider-gocd: github.com/beamly/go-gocd/gocd.(*ServerVersionService).Get(0xc000253748, 0xf94e60, 0xc0000ca030, 0x0, 0x0, 0x0, 0x0)
+2018-09-20T12:42:16.539+0530 [DEBUG] plugin.terraform-provider-gocd: 	/home/keshav/go/src/github.com/beamly/go-gocd/gocd/server_version.go:30 +0x122
+2018-09-20T12:42:16.539+0530 [DEBUG] plugin.terraform-provider-gocd: github.com/beamly/go-gocd/gocd.(*Client).getAPIVersion(0xc000253680, 0xf94e60, 0xc0000ca030, 0xe3db3d, 0x1e, 0x0, 0x0, 0x10, 0x10)
+2018-09-20T12:42:16.539+0530 [DEBUG] plugin.terraform-provider-gocd: 	/home/keshav/go/src/github.com/beamly/go-gocd/gocd/gocd.go:296 +0x4d
+2018-09-20T12:42:16.539+0530 [DEBUG] plugin.terraform-provider-gocd: github.com/beamly/go-gocd/gocd.(*PipelineConfigsService).Get(0xc000253748, 0xf94e60, 0xc0000ca030, 0xc000346478, 0x4, 0xc00020a4d0, 0xe29fd8, 0x8, 0xcb7480)
+2018-09-20T12:42:16.539+0530 [DEBUG] plugin.terraform-provider-gocd: 	/home/keshav/go/src/github.com/beamly/go-gocd/gocd/pipelineconfig.go:20 +0x72
+2018-09-20T12:42:16.539+0530 [DEBUG] plugin.terraform-provider-gocd: github.com/beamly/terraform-provider-gocd/gocd.getStageContainer(0xe29fd8, 0x8, 0xc000346478, 0x4, 0xc000253680, 0x40d64f, 0xc00020a4d0, 0x70)
+2018-09-20T12:42:16.539+0530 [DEBUG] plugin.terraform-provider-gocd: 	/home/keshav/go/src/github.com/beamly/terraform-provider-gocd/gocd/resource_pipeline_stage.go:375 +0xf1
+2018-09-20T12:42:16.539+0530 [DEBUG] plugin.terraform-provider-gocd: github.com/beamly/terraform-provider-gocd/gocd.resourcePipelineStageCreate(0xc00020a4d0, 0xdd7d40, 0xc000253680, 0x0, 0x0)
+2018-09-20T12:42:16.539+0530 [DEBUG] plugin.terraform-provider-gocd: 	/home/keshav/go/src/github.com/beamly/terraform-provider-gocd/gocd/resource_pipeline_stage.go:177 +0x19e
+2018-09-20T12:42:16.540+0530 [DEBUG] plugin.terraform-provider-gocd: github.com/hashicorp/terraform/helper/schema.(*Resource).Apply(0xc0000dea10, 0xc0000d6320, 0xc000338e80, 0xdd7d40, 0xc000253680, 0x40d601, 0xc00006ab80, 0x4937ec)
+2018-09-20T12:42:16.540+0530 [DEBUG] plugin.terraform-provider-gocd: 	/home/keshav/go/src/github.com/hashicorp/terraform/helper/schema/resource.go:225 +0x351
+2018-09-20T12:42:16.540+0530 [DEBUG] plugin.terraform-provider-gocd: github.com/hashicorp/terraform/helper/schema.(*Provider).Apply(0xc0000dea80, 0xc0000d62d0, 0xc0000d6320, 0xc000338e80, 0xc0004b8380, 0x18, 0x7f995d01dd80)
+2018-09-20T12:42:16.540+0530 [DEBUG] plugin.terraform-provider-gocd: 	/home/keshav/go/src/github.com/hashicorp/terraform/helper/schema/provider.go:283 +0x9c
+2018-09-20T12:42:16.540+0530 [DEBUG] plugin.terraform-provider-gocd: github.com/hashicorp/terraform/plugin.(*ResourceProviderServer).Apply(0xc0000be580, 0xc000338a60, 0xc000406af0, 0x0, 0x0)
+2018-09-20T12:42:16.540+0530 [DEBUG] plugin.terraform-provider-gocd: 	/home/keshav/go/src/github.com/hashicorp/terraform/plugin/resource_provider.go:527 +0x57
+2018-09-20T12:42:16.540+0530 [DEBUG] plugin.terraform-provider-gocd: reflect.Value.call(0xc0000844e0, 0xc0000ce008, 0x13, 0xe258b0, 0x4, 0xc00006af18, 0x3, 0x3, 0xc000082080, 0x0, ...)
+2018-09-20T12:42:16.540+0530 [DEBUG] plugin.terraform-provider-gocd: 	/usr/local/go/src/reflect/value.go:447 +0x449
+2018-09-20T12:42:16.540+0530 [DEBUG] plugin.terraform-provider-gocd: reflect.Value.Call(0xc0000844e0, 0xc0000ce008, 0x13, 0xc000413718, 0x3, 0x3, 0x0, 0x0, 0x0)
+2018-09-20T12:42:16.540+0530 [DEBUG] plugin.terraform-provider-gocd: 	/usr/local/go/src/reflect/value.go:308 +0xa4
+2018-09-20T12:42:16.540+0530 [DEBUG] plugin.terraform-provider-gocd: net/rpc.(*service).call(0xc0003b8080, 0xc000340280, 0xc000418030, 0xc000418040, 0xc00017c000, 0xc00040a4e0, 0xc8ba40, 0xc000338a60, 0x16, 0xc8ba80, ...)
+2018-09-20T12:42:16.540+0530 [DEBUG] plugin.terraform-provider-gocd: 	/usr/local/go/src/net/rpc/server.go:384 +0x14e
+2018-09-20T12:42:16.540+0530 [DEBUG] plugin.terraform-provider-gocd: created by net/rpc.(*Server).ServeCodec
+2018-09-20T12:42:16.540+0530 [DEBUG] plugin.terraform-provider-gocd: 	/usr/local/go/src/net/rpc/server.go:481 +0x47e
+2018/09/20 12:42:16 [TRACE] root: eval: *terraform.EvalWriteState
+2018/09/20 12:42:16 [TRACE] root: eval: *terraform.EvalApplyProvisioners
+2018/09/20 12:42:16 [TRACE] root: eval: *terraform.EvalIf
+2018/09/20 12:42:16 [TRACE] root: eval: *terraform.EvalWriteState
+2018/09/20 12:42:16 [TRACE] root: eval: *terraform.EvalWriteDiff
+2018/09/20 12:42:16 [TRACE] root: eval: *terraform.EvalApplyPost
+2018/09/20 12:42:16 [ERROR] root: eval: *terraform.EvalApplyPost, err: 1 error(s) occurred:
+
+* gocd_pipeline_stage.build: unexpected EOF
+2018/09/20 12:42:16 [ERROR] root: eval: *terraform.EvalSequence, err: 1 error(s) occurred:
+
+* gocd_pipeline_stage.build: unexpected EOF
+2018-09-20T12:42:16.541+0530 [DEBUG] plugin: plugin process exited: path=/home/keshav/.terraform.d/plugins/terraform-provider-gocd
+2018/09/20 12:42:16 [TRACE] [walkApply] Exiting eval tree: gocd_pipeline_stage.build
+2018/09/20 12:42:16 [TRACE] dag/walk: upstream errored, not walking "meta.count-boundary (count boundary fixup)"
+2018/09/20 12:42:16 [TRACE] dag/walk: upstream errored, not walking "provider.gocd (close)"
+2018/09/20 12:42:16 [TRACE] dag/walk: upstream errored, not walking "root"
+2018/09/20 12:42:16 [TRACE] Preserving existing state lineage "6205b38b-f388-4681-882b-b25b2fa1042a"
+2018/09/20 12:42:16 [TRACE] Preserving existing state lineage "6205b38b-f388-4681-882b-b25b2fa1042a"
+2018/09/20 12:42:16 [TRACE] Preserving existing state lineage "6205b38b-f388-4681-882b-b25b2fa1042a"
+2018/09/20 12:42:16 [TRACE] Preserving existing state lineage "6205b38b-f388-4681-882b-b25b2fa1042a"
+2018/09/20 12:42:16 [DEBUG] plugin: waiting for all plugin processes to complete...
+2018-09-20T12:42:16.556+0530 [WARN ] plugin: error closing client during Kill: err="connection is shut down"
